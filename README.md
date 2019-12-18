@@ -1,24 +1,23 @@
 Bingo Card Generator
 ====================
 
-Some terrible old code I wrote that belongs on the Internet.
+Create simple bingo cards from a list of terms / answers.
 
-Just dump your potential bingo terms into a text file, each on its own line, run the program, and print out the resulting HTML. Pagebreaks, etc. *should* be handled gracefully.
+```
+usage: bingo-generator.py [-h] [--outfile OUTFILE] [--columns COLUMNS]
+                          [--rows ROWS]
+                          termsfile cards sheets
 
-Usage:
-------
+positional arguments:
+  termsfile          file with terms
+  cards              number of cards per sheet
+  sheets             number of sheets
 
-```shell
-bingo-generator.py  [file of terms] [output file] [# of cards]
+optional arguments:
+  -h, --help         show this help message and exit
+  --outfile OUTFILE  output file
+  --columns COLUMNS  number of columns per card
+  --rows ROWS        number of rows per card
 ```
 
-Example:
---------
-
-```shell
-python bingo-generator.py bingo_terms.txt bingo.html 20
-```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hrs/bingo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+Use browser to print to paper or PDF.
